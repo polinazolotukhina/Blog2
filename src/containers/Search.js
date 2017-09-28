@@ -4,12 +4,7 @@ import { bindActionCreators} from 'redux';
 import * as actions from '../actions/actions';
 import PropTypes from 'prop-types';
 import { RaisedButton } from 'material-ui';
-import { browserHistory } from 'react-router';
 import TextField from 'material-ui/TextField';
-import FlatButton from 'material-ui/FlatButton';
-import PostItem from '../components/PostItem';
-import CircularProgress from 'material-ui/CircularProgress';
-import { compose } from 'redux';
 import SearchList from '../components/SearchList';
 
 
@@ -48,6 +43,7 @@ import SearchList from '../components/SearchList';
 
 Search.propTypes = {
     actions: PropTypes.object.isRequired,
+    post: PropTypes.object.isRequired,
 };
 
 

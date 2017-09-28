@@ -11,15 +11,15 @@ import Remove from '../components/Remove';
 
 
  class Post extends Component {
-
-
   render() {
-    const { posts } = this.props;
+    const { post } = this.props;
+    console.log(post.post[0].title)
+
     return (
       <div className="container">
-
-
-      POSt
+        <h2>{post.post[this.props.location.query.id].title}</h2>
+        <h4>{post.post[this.props.location.query.id].subtitle}</h4>
+        <p>{post.post[this.props.location.query.id].notes}</p>
       </div>
     );
   }
@@ -27,6 +27,7 @@ import Remove from '../components/Remove';
 
 Post.propTypes = {
     actions: PropTypes.object.isRequired,
+    post: PropTypes.object.isRequired
 };
 
 

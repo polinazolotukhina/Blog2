@@ -19,7 +19,12 @@ export default class  PostItem extends Component {
                                 <div key={index}>
                                     <h2>{item.title}</h2>
                                     <h4>{item.subtitle}</h4>
-                                    <p>{item.notes}</p>
+                                    <p>{item.notes.slice(0,250)}...</p>
+                                    <FlatButton  primary={true} label="Read More" onClick={()=>{browserHistory.push({
+                                        pathname:'/post',
+                                        query: {id: item.index}
+                                    })
+                                    }} />
                                     <Remove myactions = {actions} item={item} />
                                 </div>
                             )
