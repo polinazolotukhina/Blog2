@@ -10,7 +10,7 @@ import { bindActionCreators} from 'redux';
 
  class NewPost extends React.Component {
     submit(values) {
-      console.log(values);
+        browserHistory.push('/')
 
     }
 

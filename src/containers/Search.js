@@ -25,17 +25,14 @@ import SearchList from '../components/SearchList';
         this.setState({ hidePosts : true})
         this.props.actions.searchPost(this.state.input)
     }
-
-
     render() {
         const { post } = this.props;
-  console.log("SEARCH2", post.search )
+        console.log("Fatima", post.search.length)
         return (
           <div className="container">
             <TextField onChange={this.handleChange} hintText="Search for posts..."/>
             <RaisedButton primary={true} onClick={this.searchForPost} label="Search" primary={true} />
-            <SearchList search={post.search } />
-
+            {(post.search.length == 0) ?(<h2>No result by this search</h2>):(<SearchList search={post.search } />)}
           </div>
         );
     }

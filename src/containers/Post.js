@@ -10,6 +10,7 @@ import Remove from '../components/Remove';
 
 
 
+
  class Post extends Component {
   render() {
     const { post } = this.props;
@@ -17,9 +18,9 @@ import Remove from '../components/Remove';
 
     return (
       <div className="container">
-        <h2>{post.post[this.props.location.query.id].title}</h2>
-        <h4>{post.post[this.props.location.query.id].subtitle}</h4>
-        <p>{post.post[this.props.location.query.id].notes}</p>
+        <h2>{post.post&&post.post[this.props.location.query.id]&&post.post[this.props.location.query.id].title}</h2>
+        <h4>{post.post&&post.post[this.props.location.query.id]&&post.post[this.props.location.query.id].subtitle}</h4>
+        <p>{post.post&&post.post[this.props.location.query.id]&&post.post[this.props.location.query.id].notes}</p>
       </div>
     );
   }
